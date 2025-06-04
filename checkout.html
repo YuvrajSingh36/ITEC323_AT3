@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PlayGrounds - Checkout</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body.checkout-page {
+      background-color: #101c3c;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .checkout-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #0e1a38;
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+
+    .checkout-container h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00cfff;
+    }
+
+    .checkout-item {
+      background-color: #172447;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .total, .remaining {
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+
+    #purchase-btn,
+    #reset-credit-btn,
+    .checkout-btn {
+      background-color: #00aaff;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: background 0.3s ease;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    #purchase-btn:hover,
+    #reset-credit-btn:hover,
+    .checkout-btn:hover {
+      background-color: #0077cc;
+    }
+  </style>
+  <!-- jQuery Mobile Dependencies -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body class="checkout-page">
+  <div data-role="page" class="checkout-page">
+
+    <div data-role="header" style="text-align:center;">
+      <h1>PlayGrounds</h1>
+    </div>
+
+    <div data-role="content">
+      <div class="checkout-container">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+          <p>Your cart is currently empty.</p>
+        </div>
+        <div id="cart-message"></div>
+        <p class="total">Total: $<span id="total-price">0</span></p>
+        <p class="remaining">Remaining Credit: $<span id="remaining-credit">500</span></p>
+        <a href="#" id="purchase-btn" class="ui-btn ui-btn-b">Complete Purchase</a>
+        <a href="#" id="reset-credit-btn" class="ui-btn ui-btn-b">Reset Credit</a>
+        <a href="games.html" class="checkout-btn ui-btn ui-btn-b">Back to Browse</a>
+      </div>
+    </div>
+
+    <div data-role="footer" style="text-align:center;" data-position="fixed">
+      <h4>© 2025 PlayGrounds</h4>
+    </div>
+
+  </div>
+<script src="js/data.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
